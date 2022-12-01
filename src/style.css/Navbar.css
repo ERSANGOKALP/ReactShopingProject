@@ -1,0 +1,67 @@
+.container{  
+  display:flex;   
+  height:80px;
+  background-color:#ff5900;
+  align-items:center;
+  justify-content:space-between;  
+}
+
+
+.left{  
+  display:flex;  
+  margin:10px;  
+  align-items:center;
+  justify-content:center;  
+}
+.search{
+  display:flex;
+  
+}
+.language{
+  margin:5px;
+  align-item:center;
+  cursor:pointer;
+  font-size:25px;
+  font:bold;
+  color:white;
+}
+.searchInput{
+  border:none;
+  background-color:white;
+  color:black;
+  padding:5px 5px;
+  margin-right:5px;
+  height:20px;
+  width:300px;
+}
+button{
+  width:50px;
+  height:30px;
+  border:none;
+  background-color:white;
+  color:black;
+  cursor:pointer;    
+}
+
+.center{ 
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.ersan{
+  font-size:60px;
+  color:#fff0f0;
+  letter-spacing:10px;
+}
+
+.right{  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+   
+}
+a{
+  margin-right:30px;
+  font-size:23px;
+  color:white;
+}
