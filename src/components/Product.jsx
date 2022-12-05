@@ -3,6 +3,8 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 
+import { mobile } from "../responsive"
+
 const Info = styled.div`
   opacity:0;
   width:100%;
@@ -30,6 +32,8 @@ const Container = styled.div`
   justify-content:center;
   background-color: #f5fbfd;
   position:relative;
+ 
+  
 
   &:hover ${Info}{
     opacity:1;
@@ -42,12 +46,14 @@ const Circle = styled.div`
   border-radius:50%;
   background-color: white;
   position:absolute;
+  ${mobile({height:"150px",width:"150px"})}
 `;
 
 const Image = styled.img`
   height:75%;
   width:75%;
   z-index:2;
+ 
 `;
 
 
@@ -70,26 +76,26 @@ const Icon = styled.div`
 `;
 
 
-const Product = ({item}) => {
+const Product = ({ item }) => {
 
   return (
     <Container>
       <Circle />
-      <Image src={item.img}/>
+      <Image src={item.img} />
       <Info>
-          <Icon>
-          <ShoppingCartOutlinedIcon/>
-          </Icon>
-          <Icon>
-          <SearchOutlinedIcon/>
-          </Icon>
-          <Icon>
-          <FavoriteBorderOutlinedIcon/>
-          </Icon>
+        <Icon>
+          <ShoppingCartOutlinedIcon />
+        </Icon>
+        <Icon>
+          <SearchOutlinedIcon />
+        </Icon>
+        <Icon>
+          <FavoriteBorderOutlinedIcon />
+        </Icon>
       </Info>
     </Container>
-    
+
   )
 }
 
-export default Product ;
+export default Product;

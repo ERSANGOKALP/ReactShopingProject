@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {mobile} from "../responsive"
+import { mobile } from "../responsive"
 
 import ZoomInOutlinedIcon from '@mui/icons-material/ZoomInOutlined';
 
@@ -9,7 +9,7 @@ const Container = styled.div`
   background-color:#ff5900;
   align-items:center;
   justify-content:space-between;
-  ${mobile({padding:"10px 0px" , height:"50px"})}
+  ${mobile({ padding: "0px 0px", height: "50px" })}
   
 `;
 
@@ -18,7 +18,7 @@ const Left = styled.div`
   margin:10px;  
   align-items:center;
   justify-content:center; 
-  ${mobile({marginLeft:"5px"})}
+  ${mobile({ marginLeft: "5px" })}
 `;
 
 const Language = styled.h3`
@@ -28,7 +28,7 @@ const Language = styled.h3`
   font-size:25px;
   font:bold;
   color:white;
-  ${mobile({display:"none"})}
+  ${mobile({ display: "none" })}
 `;
 
 const Search = styled.div`
@@ -47,7 +47,7 @@ const SearchInput = styled.input`
   margin-right:5px;
   height:20px;
   width:300px;
-   ${mobile({width:"40px"})}
+   ${mobile({ width: "40px" })}
 `;
 
 
@@ -56,41 +56,44 @@ const Center = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
-  ${mobile({margin:"5px"})}
+  ${mobile({ margin: "5px" })}
 `;
 
 const Ersan = styled.h1`
   font-size:60px;
   color:#fff0f0;
   letter-spacing:10px;
-   ${mobile({margin:"0",fontSize:"20px", letterSpacing:"1px"})}
+   ${mobile({ margin: "0", fontSize: "20px", letterSpacing: "1px" })}
 `;
 
 const Right = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
-   ${mobile({margin:"0"})}
+   ${mobile({ margin: "0" })}
 `;
 
 const InformationContainer = styled.div`
   margin-right:30px;
   font-size:23px;
   color:white;
-  ${mobile({marginRight:"470px"})}
+  ${mobile({ marginRight: "470px" })}
 }
 `;
 
 const About = styled.a`
-  ${mobile({margin:"2px",fontWeight:"5px",fontSize:"10px"})}
+  margin-right:10px;
+  ${mobile({ margin: "2px", fontWeight: "5px", fontSize: "10px" })}
 `;
 
 const Contacts = styled.a`
-  ${mobile({margin:"2px",fontWeight:"5px",fontSize:"10px"})}
+margin-right:10px;
+  ${mobile({ margin: "2px", fontWeight: "5px", fontSize: "10px" })}
 `;
 
 const Info = styled.a`
-  ${mobile({margin:"2px",fontWeight:"5px",fontSize:"10px"})}
+margin-right:10px;
+  ${mobile({ margin: "2px", fontWeight: "5px", fontSize: "10px" })}
 `;
 
 
@@ -99,9 +102,9 @@ export default function Navbar() {
     <Container>
       <Left>
         <Language>ENG</Language>
-       <Search>
+        <Search>
           <SearchInput placeholder="search"></SearchInput>
-          <ZoomInOutlinedIcon />          
+          <ZoomInOutlinedIcon />
         </Search>
       </Left>
       <Center>
@@ -109,11 +112,11 @@ export default function Navbar() {
       </Center>
       <Right>
         <InformationContainer>
-        <About>About</About>
-        <Contacts>Contacts</Contacts>
-        <Info>Info</Info>
+          <About>About</About>
+          <Contacts>Contacts</Contacts>
+          <Info>Info</Info>
         </InformationContainer>
-    </Right>
+      </Right>
     </Container>
 
 

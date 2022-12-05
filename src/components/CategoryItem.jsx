@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Categories from "./Categories";
+import {mobile} from "../responsive"
 
 
 const Container = styled.div`  
@@ -8,6 +9,7 @@ const Container = styled.div`
    height:50vh;
    margin:3px;
    position:relative;
+  
 `;
 
 
@@ -16,7 +18,8 @@ const Image = styled.img`
   height:100%;
   width:100%; 
   object-fit:cover;
-  margin:10px;
+  
+ ${mobile({height:"20vh"})}
 `;
 
 const Info = styled.div`
@@ -29,11 +32,13 @@ const Info = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  ${mobile({})}
 `;
 
 const Title = styled.h1`
   color:white;
   margin-bottom:20px;
+ 
   `;
 
 const Button = styled.button`
@@ -42,7 +47,7 @@ const Button = styled.button`
    background-color:white;
    color:gray;
    cursor:pointer;
-   
+  
 `;
 
 

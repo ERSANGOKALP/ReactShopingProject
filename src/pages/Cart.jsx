@@ -7,11 +7,16 @@ import Footer from "../components/Footer"
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 
+//responsive design
+import { mobile } from "../responsive"
+
+
 
 const Container = styled.div``;
 
 const Wrapper = styled.div`
   padding:20px;
+  ${mobile({ padding: "0px" })}
 `;
 
 const Title = styled.h1`
@@ -35,17 +40,20 @@ const TopButton = styled.button`
   color: ${(props) => props.type === "filled" && "white"}; 
 `;
 
-const TopTexts = styled.div``;
+const TopTexts = styled.div`
+  ${mobile({ display: "none" })}
+`;
 
 const TopText = styled.span`
   text-decoration:underline;
   cursor:pointer;
-  margin:0px 10px;
+  margin:0px 10px;  
 `;
 
 const Bottom = styled.div`
   display:flex;
   justify-content:space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const Info = styled.div`
@@ -54,6 +62,8 @@ const Info = styled.div`
 
 const Product = styled.div`
   display:flex;
+  justify-content:space-between;
+  ${mobile({ flexDirection: "column" })}
 `;
 
 const ProductDetail = styled.div`
@@ -134,7 +144,7 @@ const SummaryItem = styled.div`
   margin:30px 0px;
   display:flex;
   justify-content:space-between;
-  font-weight: ${(props)=> props.type === "total" && "500"};
+  font-weight: ${(props) => props.type === "total" && "500"};
   font-size: ${props => props.type === "total" && "24px"};
 `;
 
@@ -190,11 +200,11 @@ const Cart = () => {
                   <RemoveIcon />
                 </ProductAmountContainer>
                 <ProductPrice>$ 35</ProductPrice>
-              </PriceDetail>             
+              </PriceDetail>
             </Product>
             <HR />
             <Product>
-            <ProductDetail>
+              <ProductDetail>
                 <Image src="https://images.pexels.com/photos/8148577/pexels-photo-8148577.jpeg?auto=compress&cs=tinysrgb&w=600" />
                 <Details>
                   <ProductName> <b>Product:</b> HAPPY LİGHT TSHİRT</ProductName>
@@ -211,7 +221,7 @@ const Cart = () => {
                 </ProductAmountContainer>
                 <ProductPrice>$ 20</ProductPrice>
               </PriceDetail>
-               </Product>
+            </Product>
           </Info>
           <Summary>
             <SummaryTitle>ORDER SUMMARY</SummaryTitle>
